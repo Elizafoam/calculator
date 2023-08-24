@@ -31,3 +31,11 @@ function operate(firstNumber, secondNumber, operator){
       return divide(firstNumber, secondNumber);
   }
 }
+
+
+const buttons = document.querySelectorAll('.button');
+const display = document.getElementById('display');
+
+buttons.forEach(button => button.addEventListener('click', () => {
+  display.textContent += button.textContent;
+}))
