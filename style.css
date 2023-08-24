@@ -61,10 +61,12 @@ header {
 #delete {
   width: auto;
   padding: 36px 10px;
+  background-color: #941C2F;
 }
 
 #equal {
   height: 125px;
+  background-color: #e97126;
 }
 
 footer {
