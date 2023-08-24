@@ -12,11 +12,40 @@ header {
 }
 
 #frame {
-  height: 850px;
+  height: 870px;
   width: 600px;
   background-color:#548687;
-  border-radius: 7px;
+  border-radius: 28px;
   margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 45px;
+  
+}
+
+#display {
+  height: 150px;
+  width: 510px;
+  background-color: #FFFFC7;
+  border-radius: 28px;
+  margin-top: 48px;
+}
+
+#controls {
+  height: 570px;
+  width: 520px;
+  background-color: #FFFFC7;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  background-color: #1D3354;
+  width: 100px;
+  height: 100px;
 }
 
 footer {
