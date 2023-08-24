@@ -1,18 +1,27 @@
 body {
   text-align: center;
-  color: #364055;
+  color: #ffffff;
   font-family: "Monaco", Courier, monospace;
   font-size: 16px;
+  background-color: #B0413E;
 }
 
 header {
   font-size: 40px;
+  margin: 10px;
 }
 
+#frame {
+  height: 850px;
+  width: 600px;
+  background-color:#548687;
+  border-radius: 7px;
+  margin: 20px auto;
+}
 
 footer {
   position: fixed;
-  background-color: #c8d3e6;
+  background-color: #963c38;
   width: 100vw;
   padding: 4px;
   bottom: 0;
