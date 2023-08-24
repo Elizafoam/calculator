@@ -25,11 +25,15 @@ header {
 }
 
 #display {
-  height: 150px;
-  width: 510px;
+  height: 30px;
+  width: 400px;
   background-color: #FFFFC7;
+  color: #1D3354;
+  font-size: 24px;
+  text-align: end;
   border-radius: 28px;
   margin-top: 48px;
+  padding: 60px;
 }
 
 #controls {
