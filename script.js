@@ -31,7 +31,12 @@ function operate(firstNumber, secondNumber, operator){
     case 'x':
       return multiply(firstNumber, secondNumber);
     case '÷':
-      return divide(firstNumber, secondNumber);
+      if (secondNumber == 0){
+        message.textContent = 'You cannot divide by 0';
+        return '';
+      } else {
+        return divide(firstNumber, secondNumber);
+      }
     case '%':
       return modulus(firstNumber, secondNumber);
   }
@@ -57,6 +62,8 @@ const equationDisplay = document.getElementById('equation');
 const equalButton = document.getElementById('equal');
 const clearButton = document.getElementById('clear');
 const deleteButton = document.getElementById('delete');
+
+const message = document.getElementById('message');
 
 numbers.forEach(button => button.addEventListener('click', () => {
   numberDisplay.textContent += button.textContent;
