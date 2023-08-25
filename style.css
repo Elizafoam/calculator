@@ -15,6 +15,7 @@ header {
   height: 870px;
   width: 600px;
   background-color:#548687;
+  box-shadow: 12px 12px 2px 1px rgba(25, 94, 95, 0.658);
   border-radius: 28px;
   margin: 20px auto;
   display: flex;
