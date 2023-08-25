@@ -25,15 +25,22 @@ header {
 }
 
 #display {
-  height: 30px;
+  height: 60px;
   width: 400px;
   background-color: #FFFFC7;
   color: #1D3354;
-  font-size: 24px;
   text-align: end;
   border-radius: 28px;
   margin-top: 48px;
-  padding: 60px;
+  padding: 50px 58px;
+}
+
+#equation{
+  font-size: 20px;
+}
+
+#number {
+  font-size: 24px;
 }
 
 #controls {

@@ -35,6 +35,8 @@ function operate(firstNumber, secondNumber, operator){
 
 const buttons = document.querySelectorAll('.button');
 const display = document.getElementById('display');
+const equalButton = document.getElementById('equal');
+const operators = ['÷', 'x', '-', '+', '%'];
 
 buttons.forEach(button => button.addEventListener('click', () => {
   display.textContent += button.textContent;
