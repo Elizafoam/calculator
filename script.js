@@ -37,11 +37,26 @@ function operate(firstNumber, secondNumber, operator){
   }
 }
 
+function clear(){
+  numberDisplay.textContent = '';
+  equationDisplay.textContent = '';   
+}
+
+function remove(){
+  let num = numberDisplay.textContent; 
+  let equation = equationDisplay.textContent; 
+  num == '' ? equationDisplay.textContent = equation.substring(0, equation.length-1) : numberDisplay.textContent = num.substring(0, num.length-1);
+}
+
 const numbers = document.querySelectorAll('.number');
 const operators = document.querySelectorAll('.operator');
+
 const numberDisplay = document.getElementById('number');
 const equationDisplay = document.getElementById('equation');
+
 const equalButton = document.getElementById('equal');
+const clearButton = document.getElementById('clear');
+const deleteButton = document.getElementById('delete');
 
 numbers.forEach(button => button.addEventListener('click', () => {
   numberDisplay.textContent += button.textContent;
@@ -60,3 +75,6 @@ equalButton.addEventListener('click', () => {
   numberDisplay.textContent = result;
   equationDisplay.textContent = ''; 
 })
+
+clearButton.addEventListener('click', clear);
+deleteButton.addEventListener('click', remove);
