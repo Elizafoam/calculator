@@ -18,6 +18,9 @@ function multiply(a, b) {
 function divide(a, b) {
   return a / b;
 }
+function modulus(a, b){
+  return a % b;
+}
 
 function operate(firstNumber, secondNumber, operator){
   switch(operator){
@@ -29,6 +32,8 @@ function operate(firstNumber, secondNumber, operator){
       return multiply(firstNumber, secondNumber);
     case '÷':
       return divide(firstNumber, secondNumber);
+    case '%':
+      return modulus(firstNumber, secondNumber);
   }
 }
 
