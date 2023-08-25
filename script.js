@@ -32,12 +32,26 @@ function operate(firstNumber, secondNumber, operator){
   }
 }
 
-
-const buttons = document.querySelectorAll('.button');
-const display = document.getElementById('display');
+const numbers = document.querySelectorAll('.number');
+const operators = document.querySelectorAll('.operator');
+const numberDisplay = document.getElementById('number');
+const equationDisplay = document.getElementById('equation');
 const equalButton = document.getElementById('equal');
-const operators = ['÷', 'x', '-', '+', '%'];
 
-buttons.forEach(button => button.addEventListener('click', () => {
-  display.textContent += button.textContent;
+numbers.forEach(button => button.addEventListener('click', () => {
+  numberDisplay.textContent += button.textContent;
 }))
+
+operators.forEach(button => button.addEventListener('click', () => {
+  firstNumber = parseInt(numberDisplay.textContent);
+  equationDisplay.textContent = numberDisplay.textContent + button.textContent;
+  operator = button.textContent;
+  numberDisplay.textContent = '';
+}))
+
+equalButton.addEventListener('click', () => {
+  secondNumber = parseInt(numberDisplay.textContent);
+  let result  = operate(firstNumber, secondNumber, operator);
+  numberDisplay.textContent = result;
+  equationDisplay.textContent = ''; 
+})
