@@ -48,14 +48,14 @@ numbers.forEach(button => button.addEventListener('click', () => {
 }))
 
 operators.forEach(button => button.addEventListener('click', () => {
-  firstNumber = parseInt(numberDisplay.textContent);
+  firstNumber = numberDisplay.textContent.includes('.') ? parseFloat(numberDisplay.textContent) : parseInt(numberDisplay.textContent);
   equationDisplay.textContent = numberDisplay.textContent + button.textContent;
   operator = button.textContent;
   numberDisplay.textContent = '';
 }))
 
 equalButton.addEventListener('click', () => {
-  secondNumber = parseInt(numberDisplay.textContent);
+  secondNumber = numberDisplay.textContent.includes('.') ? parseFloat(numberDisplay.textContent) : parseInt(numberDisplay.textContent);
   let result  = operate(firstNumber, secondNumber, operator);
   numberDisplay.textContent = result;
   equationDisplay.textContent = ''; 
